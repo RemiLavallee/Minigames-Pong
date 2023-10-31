@@ -1,0 +1,7 @@
+
+Icsharpsquid:S3903",Move 'MonoSingleton' into a named namespace.(š˜Ìö
+Icsharpsquid:S3903",Move 'PlayerManager' into a named namespace.(Éø™÷
+csharpsquid:S2743"dA static field in a generic type is not shared among instances of different close constructed types.(üˆœ£
+†csharpsquid:S2743"dA static field in a generic type is not shared among instances of different close constructed types.(ûÀ†“øÿÿÿÿ
+wcsharpsquid:S2696:"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(î§÷ôüÿÿÿÿ
+rcsharpsquid:S2696<"UMake the enclosing instance method 'static' or remove this set on the 'static' field.(äìà
