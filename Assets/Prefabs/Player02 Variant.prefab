@@ -91,12 +91,12 @@ PrefabInstance:
     - target: {fileID: 6339130041377123548, guid: 51085aa145aa2644180b811b407a8f78,
         type: 3}
       propertyPath: upKey
-      value: 105
+      value: 273
       objectReference: {fileID: 0}
     - target: {fileID: 6339130041377123548, guid: 51085aa145aa2644180b811b407a8f78,
         type: 3}
       propertyPath: downKey
-      value: 107
+      value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 8988770128472554266, guid: 51085aa145aa2644180b811b407a8f78,
         type: 3}
