@@ -14,7 +14,7 @@ namespace Core.Pong
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
-            maxSpeed = initialSpeed + 20;
+            maxSpeed = initialSpeed + 10;
             StartCoroutine(LaunchBallDelay(1.0f));
         }
 
@@ -31,8 +31,15 @@ namespace Core.Pong
 
             if (hit.collider.gameObject.CompareTag("Paddle"))
             {
-                _rb.MovePosition(hit.point);
-                _rb.velocity = Vector2.Reflect(_rb.velocity, hit.normal);
+                var paddleRb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
+                
+                var hitPointRelative = (hit.point - (Vector2)hit.collider.transform.position).y;
+                var normalizedRelativePosition = hitPointRelative / (hit.collider.bounds.size.y / 2);
+                var speedMultiplier = 1 + Mathf.Abs(normalizedRelativePosition);
+                var newVelocity = Vector2.Reflect(_rb.velocity, hit.normal) * speedMultiplier;
+                
+                newVelocity += paddleRb.velocity * 0.25f;
+                _rb.velocity = newVelocity.magnitude > maxSpeed ? newVelocity.normalized * maxSpeed : newVelocity;
             }
         }
 
